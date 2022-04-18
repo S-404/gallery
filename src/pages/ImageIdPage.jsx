@@ -17,7 +17,7 @@ const ImageIdPage = () => {
     }, [])
 
     return (
-        <Container className="col-md-4 col-sm-12">
+        <Container className="col-md-4 col-sm-12 mt-4">
 
             <Link to={"/"}>
                 <Button variant="outline-primary">Назад</Button>
