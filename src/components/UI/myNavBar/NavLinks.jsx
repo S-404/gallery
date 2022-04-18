@@ -9,6 +9,7 @@ const NavLinks = () => {
             <>
                 {withNavbarRoutes.map(route => (
                         <Navbar.Toggle
+                            key={route.name}
                             as={Link}
                             to={route.path}
                         >
