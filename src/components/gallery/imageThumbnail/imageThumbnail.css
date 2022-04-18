@@ -1,0 +1,10 @@
+.image-thumbnail:hover{
+    background-color: #d5d5d5;
+}
+.image-thumbnail:hover > .image-thumbnail__button{
+    visibility: visible;
+}
+
+.image-thumbnail .image-thumbnail__button{
+    visibility: hidden;
+}
