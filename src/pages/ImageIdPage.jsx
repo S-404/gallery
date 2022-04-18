@@ -10,14 +10,14 @@ const ImageIdPage = () => {
 
     const params = useParams()
     const {fetchOneImage} = useActions()
-    const {loading, error} = useSelector(state => state.image)
+    const {image,loading, error} = useSelector(state => state.image)
 
     useEffect(() => {
         fetchOneImage(params.id)
     }, [])
 
     return (
-        <Container className="col-md-5 col-sm-12">
+        <Container className="col-md-4 col-sm-12">
 
             <Link to={"/"}>
                 <Button variant="outline-primary">Назад</Button>
@@ -30,7 +30,7 @@ const ImageIdPage = () => {
             {loading ?
                 <MyLoader/>
                 :
-                <ImageCard/>
+                <ImageCard image={image}/>
             }
 
         </Container>
