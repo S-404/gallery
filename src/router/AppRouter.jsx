@@ -1,6 +1,6 @@
 import React from "react"
 import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom"
-import {withNavbarRoutes, withoutNavbarRoutes} from "./routes"
+import {redirectRoute, withNavbarRoutes, withoutNavbarRoutes} from "./routes"
 import MyNavBar from "../components/UI/myNavBar/MyNavBar"
 
 const AppRouter = () => {
@@ -25,8 +25,9 @@ const AppRouter = () => {
                             component={route.component}
                         />
                     ))}
+                    <Redirect exact to={redirectRoute.path}/>
                 </>
-                <Redirect exact to={"/"}/>
+
             </Switch>
         </Router>
     )

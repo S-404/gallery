@@ -7,7 +7,7 @@ const ImageThumbnail = ({image}) => {
     const router = useHistory()
 
     const onClickButtonHandler = (id) => {
-        router.push(`/image/${id}`)
+        router.push(`/gallery/image/${id}`)
     }
     return (
         <div className="image-thumbnail position-relative">

@@ -10,7 +10,7 @@ const ImageIdPage = () => {
 
     const params = useParams()
     const {fetchOneImage} = useActions()
-    const {image,loading, error} = useSelector(state => state.image)
+    const {image, loading, error} = useSelector(state => state.image)
 
     useEffect(() => {
         fetchOneImage(params.id)
@@ -19,9 +19,9 @@ const ImageIdPage = () => {
     return (
         <Container className="col-md-4 col-sm-12 mt-4">
 
-            <Link to={"/"}>
-                <Button variant="outline-primary">Назад</Button>
-            </Link>
+
+            <Button as={Link} to={'/gallery'} variant="outline-primary">Назад</Button>
+
 
             <h2>Подробности о картинке</h2>
 
