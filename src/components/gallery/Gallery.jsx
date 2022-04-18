@@ -1,7 +1,7 @@
 import React from "react"
 import {useSelector} from "react-redux"
 import {useImages} from "../../hooks/useImages"
-import ImageCategory from "./ImageCategory"
+import ImageCategory from "./ImageCategory/ImageCategory"
 
 const Gallery = () => {
 
@@ -15,7 +15,7 @@ const Gallery = () => {
     return (
         <>
             {galleryPerCategories.map((imageCategory) => (
-                <ImageCategory imageCategory={imageCategory}/>
+                <ImageCategory key={imageCategory.category} imageCategory={imageCategory}/>
             ))}
         </>
     )

@@ -8,8 +8,10 @@ const ImageCard = ({image}) => {
             <Card.Body>
                 <Card.Title>{image?.title}</Card.Title>
                 <Card.Text>id: {image?.id}</Card.Text>
-                <Card.Link href={image?.url}>Image Link</Card.Link>
             </Card.Body>
+            <Card.Footer>
+                <Card.Link href={image?.url} target='_blank'>Image Link</Card.Link>
+            </Card.Footer>
         </Card>
     )
 }
