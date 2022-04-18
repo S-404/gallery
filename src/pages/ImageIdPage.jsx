@@ -5,6 +5,7 @@ import {useSelector} from "react-redux"
 import {Alert, Button, Container} from "react-bootstrap"
 import ImageCard from "../components/imageCard/ImageCard"
 import MyLoader from "../components/UI/MyLoader"
+import {homeRoute} from "../router/routes"
 
 const ImageIdPage = () => {
 
@@ -20,8 +21,7 @@ const ImageIdPage = () => {
         <Container className="col-md-4 col-sm-12 mt-4">
 
 
-            <Button as={Link} to={'/gallery'} variant="outline-primary">Назад</Button>
-
+            <Button as={Link} to={homeRoute.path} variant="outline-primary">Назад</Button>
 
             <h2>Подробности о картинке</h2>
 

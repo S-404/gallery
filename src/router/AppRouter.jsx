@@ -1,33 +1,29 @@
 import React from "react"
 import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom"
-import {redirectRoute, withNavbarRoutes, withoutNavbarRoutes} from "./routes"
 import MyNavBar from "../components/UI/myNavBar/MyNavBar"
+import {aboutMeRoute, homeRoute, imageIdRoute} from "./routes"
 
 const AppRouter = () => {
     return (
-        <Router>
+        <Router basename={"/gallery"}>
+            <MyNavBar/>
             <Switch>
-                {withoutNavbarRoutes.map(route => (
-                    <Route
-                        exact={route?.isExact}
-                        key={route.name}
-                        path={route.path}
-                        component={route.component}
-                    />
-                ))}
-                <>
-                    <MyNavBar/>
-                    {withNavbarRoutes.map(route => (
-                        <Route
-                            exact={route?.isExact}
-                            key={route.name}
-                            path={route.path}
-                            component={route.component}
-                        />
-                    ))}
-                    <Redirect exact to={redirectRoute.path}/>
-                </>
-
+                <Route
+                    exact
+                    path={imageIdRoute.path}
+                    component={imageIdRoute.component}
+                />
+                <Route
+                    exact
+                    path={homeRoute.path}
+                    component={homeRoute.component}
+                />
+                <Route
+                    exact
+                    path={aboutMeRoute.path}
+                    component={aboutMeRoute.component}
+                />
+                <Redirect exact to={homeRoute.path}/>
             </Switch>
         </Router>
     )
