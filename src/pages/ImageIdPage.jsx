@@ -20,7 +20,13 @@ const ImageIdPage = () => {
     return (
         <Container className="col-md-4 col-sm-12 mt-1">
 
-            <Button as={Link} to={homeRoute.path} variant="outline-primary">Назад</Button>
+            <Button
+                as={Link}
+                to={homeRoute.path}
+                variant="outline-primary"
+            >
+                Назад
+            </Button>
 
             <h2>Подробности о картинке</h2>
 

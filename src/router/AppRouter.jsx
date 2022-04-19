@@ -6,24 +6,26 @@ import {aboutMeRoute, homeRoute, imageIdRoute} from "./routes"
 const AppRouter = () => {
     return (
         <Router basename={"/gallery"}>
-            <MyNavBar/>
             <Switch>
                 <Route
                     exact
                     path={imageIdRoute.path}
                     component={imageIdRoute.component}
                 />
-                <Route
-                    exact
-                    path={homeRoute.path}
-                    component={homeRoute.component}
-                />
-                <Route
-                    exact
-                    path={aboutMeRoute.path}
-                    component={aboutMeRoute.component}
-                />
-                <Redirect exact to={homeRoute.path}/>
+                <>
+                    <MyNavBar/>
+                    <Route
+                        exact
+                        path={homeRoute.path}
+                        component={homeRoute.component}
+                    />
+                    <Route
+                        exact
+                        path={aboutMeRoute.path}
+                        component={aboutMeRoute.component}
+                    />
+                    <Redirect exact to={homeRoute.path}/>
+                </>
             </Switch>
         </Router>
     )

@@ -12,12 +12,12 @@ const ImageThumbnail = ({image}) => {
     return (
         <div className="image-thumbnail position-relative">
             <img
-                className="image-thumbnail__image m-1"
+                className="image-thumbnail__image m-1 rounded"
                 src={image?.thumbnailUrl}
                 alt={`image_${image.id}`}
             />
             <div className="image-thumbnail__button d-flex justify-content-center w-100 p-3 position-absolute bottom-0 start-0">
-                <Button onClick={() => onClickButtonHandler(image.id)}>
+                <Button variant='secondary' onClick={() => onClickButtonHandler(image.id)}>
                     Подробнее
                 </Button>
             </div>
