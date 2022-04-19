@@ -1,7 +1,7 @@
 import React from "react"
 import {useHistory} from "react-router-dom"
 import {Button} from "react-bootstrap"
-import "./imageThumbnail.css"
+import "../../../styles/imageThumbnail.css"
 
 const ImageThumbnail = ({image}) => {
     const router = useHistory()

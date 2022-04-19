@@ -32,7 +32,7 @@ const ImageIdPage = () => {
 
             <Alert show={!!error} variant="danger">{error}</Alert>
 
-            {loading ?
+            {loading || !image?.id?
                 <MyLoader/>
                 :
                 <ImageCard image={image}/>
